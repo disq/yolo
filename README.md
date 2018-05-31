@@ -3,11 +3,11 @@
 [![godoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/disq/yolo)
 [![Go Report](https://goreportcard.com/badge/github.com/disq/yolo)](https://goreportcard.com/report/github.com/disq/yolo)
 
-# log
+# yolo
 
 Yet another logging library.
 
-# Levels
+# Log Levels
 
 	LevelDebug
 	LevelInfo
