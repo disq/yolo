@@ -38,14 +38,14 @@ ERROR [test-debug] yolo_test.go:17: Error message
 func TestLevel(t *testing.T) {
 	var b bytes.Buffer
 
-	l := yolo.New(yolo.WithLevel(yolo.LevelWarning), yolo.WithTimeFormat("", false), yolo.WithOutput(&b))
+	l := yolo.New(yolo.WithLevel(yolo.LevelWarn), yolo.WithTimeFormat("", false), yolo.WithOutput(&b))
 	l.Debugf("Debug message")
 	l.Infof("Info message")
-	l.Warningf("Warning message")
+	l.Warnf("Warn message")
 	l.Errorf("Error message")
 
 	result := b.Bytes()
-	golden := []byte("WARNING yolo_test.go:44: Warning message\nERROR yolo_test.go:45: Error message\n")
+	golden := []byte("WARN yolo_test.go:44: Warn message\nERROR yolo_test.go:45: Error message\n")
 	if !bytes.Equal(golden, result) {
 		t.Errorf("Got: %q Want: %q", string(result), string(golden))
 	}

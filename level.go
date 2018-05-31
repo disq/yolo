@@ -7,7 +7,7 @@ const (
 	// Log levels
 	LevelDebug Level = iota + 1
 	LevelInfo
-	LevelWarning
+	LevelWarn
 	LevelError
 )
 
@@ -18,8 +18,8 @@ func (l Level) String() string {
 		return "DEBUG"
 	case LevelInfo:
 		return "INFO"
-	case LevelWarning:
-		return "WARNING"
+	case LevelWarn:
+		return "WARN"
 	case LevelError:
 		return "ERROR"
 	default:
@@ -34,8 +34,8 @@ func LevelFromString(s string) (Level, error) {
 		return LevelDebug, nil
 	case "info":
 		return LevelInfo, nil
-	case "warning":
-		return LevelWarning, nil
+	case "warn":
+		return LevelWarn, nil
 	case "error":
 		return LevelError, nil
 	default:

@@ -4,15 +4,13 @@ import "fmt"
 
 // Log is a generic logger interface
 type Logger interface {
-	Debug(i ...interface{})
 	Debugf(format string, args ...interface{})
-	Info(i ...interface{})
 	Infof(format string, args ...interface{})
-	Warn(i ...interface{})
 	Warnf(format string, args ...interface{})
-	Error(i ...interface{})
 	Errorf(format string, args ...interface{})
 }
+
+var _ Logger = (*Yolo)(nil)
 
 // DefaultTimeFormat is our default time format
 const DefaultTimeFormat = "2006-01-02 15:04:05.000"

@@ -11,7 +11,7 @@ Yet another logging library.
 
 	LevelDebug
 	LevelInfo
-	LevelWarning
+	LevelWarn
 	LevelError
 
 # Options

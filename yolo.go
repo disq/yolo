@@ -131,9 +131,9 @@ func (l *Yolo) Infof(format string, a ...interface{}) {
 	l.write(LevelInfo, format, a...)
 }
 
-// Warningf logs formatted message in warning level
-func (l *Yolo) Warningf(format string, a ...interface{}) {
-	l.write(LevelWarning, format, a...)
+// Warnf logs formatted message in warn level
+func (l *Yolo) Warnf(format string, a ...interface{}) {
+	l.write(LevelWarn, format, a...)
 }
 
 // Errorf logs formatted message in error level
